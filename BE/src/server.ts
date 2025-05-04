@@ -46,12 +46,11 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 app.use(errorHandler);
 
 // Start server
-if (process.env.NODE_ENV !== "production") {
-  const PORT = config.port;
-  app.listen(PORT, () => {
-    logger.info(`Server running in ${config.nodeEnv} mode on port ${PORT}`);
-  });
-}
+
+const PORT = config.port;
+app.listen(PORT, () => {
+  logger.info(`Server running in ${config.nodeEnv} mode on port ${PORT}`);
+});
 
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err: Error) => {
