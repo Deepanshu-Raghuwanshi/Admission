@@ -15,6 +15,11 @@ A full-stack application for managing admission forms with React, TypeScript, No
 
 ## Getting Started
 
+## Clone repo
+
+git clone https://github.com/Deepanshu-Raghuwanshi/Admission.git
+cd admission
+
 ### Backend Setup
 
 1. Navigate to the backend directory:
@@ -34,7 +39,7 @@ A full-stack application for managing admission forms with React, TypeScript, No
    ```
    NODE_ENV=development
    PORT=5000
-   MONGO_URI=mongodb://localhost:27017/admission_db
+   MONGO_URI=mongodb://localhost:27017/admission_db(production uri example use your personal =>mongodb+srv://dipanshuraghuwanshi:password@cluster0.luqz6xt.mongodb.net/admission?retryWrites=true&w=majority)
    JWT_SECRET=your_jwt_secret_key_here
    LOG_LEVEL=info
    ```
@@ -57,6 +62,9 @@ A full-stack application for managing admission forms with React, TypeScript, No
    ```bash
    npm install
    ```
+
+   if deploying then create env on root of FE with this for backend url
+   VITE_API_URL=your_backend_url_here
 
 3. Start the development server:
 
